@@ -9,6 +9,7 @@
     "moduleDetection": "force",
     "module": "Preserve",
     "moduleResolution": "node",
+    "noEmit": true,
     "noUnusedLocals": true,
     "pretty": true,
     "resolveJsonModule": true,
