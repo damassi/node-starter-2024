@@ -1,0 +1,49 @@
+{
+  "name": "node-starter-2024",
+  "version": "0.0.1",
+  "description": "Node.js starter app",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix",
+    "prettier": "prettier --write",
+    "start": "tsx src/index.ts",
+    "test": "jest",
+    "prepare": "husky",
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "author": "Christopher Pappas <damassi.pappas@gmail.com>",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "post-merge": "sh scripts/pull-lock.sh",
+      "pre-commit": "lint-staged && bin/detect-secrets hook",
+      "pre-push": "yarn type-check"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,css,md}": "npm run prettier",
+    "*.{ts,tsx}": "npm run lint"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "semi": false,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "tsx": "^4.17.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/jest": "^29.5.12",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.4",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.4",
+    "typescript-eslint": "^8.1.0"
+  }
+}
