@@ -36,6 +36,14 @@
             "in": "query",
             "name": "id",
             "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "foo",
+            "required": false
           }
         ],
         "responses": {

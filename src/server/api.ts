@@ -15,6 +15,7 @@ export const api = async (app: FastifyInstance) => {
           type: "object",
           properties: {
             id: { type: "string" },
+            foo: { type: "string" },
           },
           required: ["id"],
         },

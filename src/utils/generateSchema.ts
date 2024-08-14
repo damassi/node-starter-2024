@@ -10,5 +10,5 @@ export const generateSchema = async (app: FastifyInstance) => {
   mkdirSync(OUTPUT_DIR, { recursive: true })
   writeFileSync(OUTPUT_FILE, JSON.stringify(swaggerSpec, null, 2))
 
-  app.log.info(`OpenAPI Schema generated at ${OUTPUT_FILE}`)
+  app.log.info(`[app] OpenAPI Schema generated at ${OUTPUT_FILE}`)
 }

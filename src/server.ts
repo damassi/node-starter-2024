@@ -50,15 +50,16 @@ try {
   await app.vite.ready()
   await app.ready()
 
-  // Generate OpenAPI schema
+  generateSchema(app)
+
+  // If flag is passed, generate and bail
   if (process.argv.includes("--generate-schema")) {
-    generateSchema(app)
     process.exit(0)
   }
 
   // Start the server
   await app.listen({ port: Number(PORT) }, (_, address) => {
-    app.log.info(`OpenAPI Docs: ${address}/docs`)
+    app.log.info(`[app] OpenAPI Docs: ${address}/docs`)
   })
 } catch (error) {
   app.log.error(error)
