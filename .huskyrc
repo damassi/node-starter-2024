@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "post-merge": "sh scripts/pull-lock.sh",
+    "pre-commit": "lint-staged && bin/detect-secrets hook",
+    "pre-push": "yarn type-check"
+  }
+}
