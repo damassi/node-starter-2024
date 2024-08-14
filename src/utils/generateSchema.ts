@@ -1,8 +1,9 @@
+import { resolve, join } from "node:path"
 import { FastifyInstance } from "fastify"
 import { writeFileSync, mkdirSync } from "node:fs"
 
-const OUTPUT_DIR = "./src/__generated__"
-const OUTPUT_FILE = `${OUTPUT_DIR}/api-schema.json`
+const OUTPUT_DIR = resolve("./src/__generated__")
+const OUTPUT_FILE = join(OUTPUT_DIR, "api-schema.json")
 
 export const generateSchema = async (app: FastifyInstance) => {
   const swaggerSpec = app.swagger()

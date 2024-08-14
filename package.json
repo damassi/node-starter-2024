@@ -9,7 +9,7 @@
     "build": "vite build",
     "dev": "tsx watch --ignore ./vite.config.js.timestamp-* --ignore 'src/client/*' src/server.ts --dev",
     "docs": "open http://localhost:3000/docs",
-    "generate-schema": "tsx src/server.ts --generate-schema && npx openapi-typescript ./src/schema/api-schema.json --output ./src/schema/api-schema.ts",
+    "generate-schema": "tsx src/server.ts --generate-schema && npx openapi-typescript ./src/__generated__/api-schema.json --output ./src/__generated__/api-schema.ts",
     "lint": "eslint --fix",
     "postinstall": "npm run generate-schema",
     "prepare": "husky",
