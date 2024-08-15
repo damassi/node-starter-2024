@@ -15,7 +15,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "target": "ES2022"
+    "target": "ES2022",
+    "types": ["vitest/globals"]
   },
   "include": ["./src"]
 }

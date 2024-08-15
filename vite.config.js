@@ -14,6 +14,12 @@ const config = {
     outDir: `${root}/dist`,
     emptyOutDir: true,
   },
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "test.setup.ts",
+    watch: false,
+  },
 }
 
 export default config
