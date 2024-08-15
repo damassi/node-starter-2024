@@ -1,7 +1,3 @@
-/*
- * @jest-environment node
- */
-
 import fastify from "fastify"
 import { api } from "server/api"
 

@@ -8,7 +8,7 @@ Provides a quick-start Node.js app with some common default tooling:
 - [OpenAPI-Fetch](https://openapi-ts.dev/openapi-fetch/): Connects your type-safe server API to the client for end-to-end support
 - [TSX](https://tsx.is/): Run TypeScript everywhere, and reload code when things change
 - [Husky](https://github.com/typicode/husky)/[Lint-Staged](https://github.com/lint-staged/lint-staged): Git precommit hooks
-- [Jest](https://jestjs.io/)
+- [Vitest](https://vitest.dev): Testing
 - [@testing-library/react](https://testing-library.com/docs/react-testing-library)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
